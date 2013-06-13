@@ -1,7 +1,7 @@
-Swap Adapter
+Swap Store
 ============
 
-The Swap Adapter allows you to use two different adapters in conjunction with
+The Swap Store allows you to use two different adapters in conjunction with
 each other.
 
 For instance: Say you want to use Ryan Florence's
@@ -17,11 +17,9 @@ You can use the `SwapAdapter` by setting it as your store in your application's
 initial code:
 
 ```javascript
-App.Store = DS.Store.extend({
-  adapter: DS.SwapAdapter.extend({
-    primaryAdapter:   DS.LSAdapter,
-    secondaryAdapter: DS.RESTAdapter
-  })
+App.Store = DS.SwapStore.extend({
+  primaryAdapter:   DS.LSAdapter,
+  secondaryAdapter: DS.RESTAdapter
 });
 ```
 
